@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+div.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /* To align items veritcally, without flex, check out "display: table-cell;" and "vertical-align:middle;" */
+    flex-wrap: wrap;
+
+    margin: 2em auto;
+    width: 60%;
+    border: 1px solid #eee;
+}
+div.item {
+    margin: 2em;
+    width: 20%;
+    padding: 1em;
+    box-sizing: border-box; /* takes care of the width calculations */
+    height: 100px;
+    border: 1px solid #bbb;
+}
+
+div.tall{
+    height: 20em;
+}
+div.medium {
+    height: 10em;
+}

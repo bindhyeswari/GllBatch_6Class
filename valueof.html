@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="reset.css"/>
+    <style>
+        div{
+            background-color: red;
+        }
+    </style>
+    <script>
+        var z;
+        var x = 5;
+        var y = 3;
+        var obj = {
+            valueOf: function (){
+                return false;
+            },
+            sayHello: function (){
+                return 'Hello from obj';
+            }
+        };
+        // falsy values are values which convert to a Boolean false
+        // '', 0, null, undefined, false
+        if (obj == '') {
+            console.log('Found x to be equal to y');
+        } else {
+            console.log('Found x not to be equal to y');
+        }
+
+        // valueOf - defined properly
+        // toString - falls back
+
+        console.log('10' + 5);
+    </script>
+</head>
+<body>
+<div>
+    sdfasdf
+    asd
+    f
+    asd
+    f
+    asdf
+    asdf
+</div>
+
+</body>
+</html>

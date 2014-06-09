@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="bower_components/open-sans-fontface/open-sans.css"/>
+    <style>
+        /*
+            Modal -->
+            1. Create button in the center of the page
+            2. make it green
+            3. apply text shadow
+            4. Change text to 'Bring up Modal'
+            5. apply :hover properties (change color when someone hovers over it)
+            6. Use transition to make the :hover changes a little animated
+        */
+        body{
+            font: 300 1em 'Open Sans';
+            margin: 0;
+            padding: 0;
+        }
+        div.container {
+            padding: 5em;
+            margin: 0 auto;
+            text-align: center;
+            width: 60%;
+        }
+
+        span.button{
+            display: inline-block;
+            padding: 0.35em 0.5em;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 0.25em;
+            color:black;
+            text-shadow: 1px 1px 1px #eee;
+        }
+
+        span.button:hover{
+            background-color: black;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+            transition: all 200ms linear;
+            cursor: pointer;
+        }
+
+        div.modal{
+            display: none;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(204,204,204,0.8);
+        }
+        div.modal_content{
+
+            margin: 5em auto;
+            padding: 0.5em;
+            border: 1px solid white;
+            width: 60%;
+            min-height: 5em;
+            background-color: white;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            console.log('Hello World');
+
+            // event handler for the button to bring up the modal if there is a click on it
+            document.getElementById('btn_modal').addEventListener('click', function(){
+                console.log('Hello World from btn1');
+
+                // change the display property fo the modal div
+                document.getElementById('modal').style.display = 'block';
+
+            });
+
+            // event handler for the modal div to set the modal div display to none
+            document.getElementById('modal').addEventListener('click', function(){
+                document.getElementById('modal').style.display = 'none';
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+    <div id="modal" class="modal">
+        <div class="modal_content">
+            I am a modal
+        </div>
+    </div>
+
+    <div class="container">
+        <span id="btn_modal" class="button">Bring Up Modal</span>
+    </div>
+
+
+</body>
+</html>
